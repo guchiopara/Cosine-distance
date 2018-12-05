@@ -8,7 +8,7 @@ from googlesearch import search
 import socket
 
 
-#computes the word features.
+# Computes the word features.
 def word_features(word):
     from collections import Counter
     from math import sqrt
