@@ -19,7 +19,8 @@ Usage:
 python phishing_url_detector.py --url 'URL'
 
 Methodology
-python phishing_url_detector.py takes a URL as input, extracts its domain name and makes a google search with the domain name.
+
+phishing_url_detector.py takes a URL as input, extracts its domain name and makes a Google search with the domain name.
 
 The input URL is the Primary Url while the the top three results from the Google search are the secondary URL.
 
