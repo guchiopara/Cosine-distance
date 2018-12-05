@@ -17,3 +17,15 @@ Usage:
 
 
 python phishing_url_detector.py --url 'URL'
+
+Methodology
+python phishing_url_detector.py takes a URL as input, extracts its domain name and makes a google search with the domain name.
+
+The input URL is the Primary Url while the the top three results from the Google search are the secondary URL.
+
+The Cosine similarity between the Primary and Secondary URLs are calculated with a threshold of 0.5.
+
+If the cosine similarity is < 0.5, then the Primary URL is a phishing URL.
+
+But if the cosine similarity exceeds 0.5, the IP addresses of the primary and secondary URLs are compared. If there is a match, then the Primary URL is not a phishing URL. 
+
