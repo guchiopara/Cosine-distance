@@ -70,7 +70,7 @@ def check_phising_cosine(coslist):
 		if val >= 0.5:
 			#print ("Cosine match greater than 0.5")
 			return False
-	print ("The cosine similarity did not exceed 0.5")
+	#print ("The cosine similarity did not exceed 0.5")
 	return True
 
 #Checking the ips for more than 0.5 cosine distance.
@@ -86,7 +86,7 @@ def check_phising_ip(primary_url, urllist):
 		#Getting the intersection of the ip lists.
 		#print ("\nprimary ip list\n", primary_ip[-1],"\n secondary_ip_list", secondary_ip[-1])
 		if len(set(primary_ip[-1]).intersection(secondary_ip[-1])): 
-			print ("The ips matched.")
+			#print ("The ips matched.")
 			return False
 	return True
 
@@ -104,6 +104,8 @@ if __name__ == "__main__":
 		is_phising = check_phising_ip(primary_url, secondary_url_list)
 	
 	if is_phising:
-		print ("\n\nThe url ", primary_url, " is a phising URL.")
+		#print ("\n\nThe url ", primary_url, " is a phising URL.")
+		print('true')
 	else:
-		print ("\n\nThe url ", primary_url, "is not a phising URL.")
+		#print ("\n\nThe url ", primary_url, "is not a phising URL.")
+		print('false')
