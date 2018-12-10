@@ -4,7 +4,7 @@
 $url = '';
 if (isset($_GET['url'])) {
   // Escape command (very important for security).
-  url = escapeshellcmd($_GET['url']);
+  $url = escapeshellcmd($_GET['url']);
 } else {
   http_response_code(400); // Give 400 bad request.
   echo json_encode(['error' => 'No URL supplied.']);
